@@ -1,0 +1,57 @@
+<!-- index.html
+   -    Author:             Jack
+   -    Date:               2021-02-23
+   -    Last revised:       2024-07-11
+   -    Description:        HTML for To-do app
+   -->    
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<link rel='stylesheet' href='css/style.css'>
+	<link rel='icon' href='images/icon.png'>
+	<script src='js/main.js' type='module'></script>
+	<title>To Do List</title>
+
+	<style>
+		.ti-printer {
+			width:25px;
+			height: 25px;
+			display: inline-block;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: white;
+			font-size: 1.5rem;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<span class="ti-printer" id="print"></span>
+		<section class='newItemEntry' id="newItemEntry">
+			<form id='itemEntryForm'>
+				<label for='newItem'>Enter a new to do item</label>
+				<input id='newItem' type='text' size='40' autocomplete='off' placeholder='Add Item' tabindex='0'>
+				<button id='addItem' class='button' title='Add New Item' aria-label='Add new item to list' tabindex='0'>+</button>
+			</form>
+		</section>
+		<section class='listContainer'>
+			<div class='listTitle'>
+				<h1>To Do List</h1>
+				<button id='clearItems' class='button' title='clear the list' aria-label='Remove all items from the list' tabindex='0'>Clear</button>
+			</div>
+			<hr>
+			<div id='listItems'>
+			</div>
+		</section>
+	</main>
+	<script src="js/print.js"></script>
+	<script src='/js/w3c.js'></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+// _base.scss
+//  Author:             Jack
+//  Date:               2022-03-30
+//  Last revised:       2024-07-11
+//  Description:        Variables for Lab 10's CSS
+
+$default-font-color: #000;
+$background-color: #124467;
+$container-bgcolor: #f2f2f2;
+$container-bordercolor: #000;
+$button-textcolor: #fff;
+$button-hovercolor: #000;
+$add-button-color: #4caf50;
+$clear-button-color: #9f6060;
+$textbox-bordercolor: #000;
+
+@mixin mq($size) {
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	clear: both;
+	content: "";
+}
+
+body {
+	padding: 20px;
+	background: $background-color;
+	font-family: 'Montserrat', sans-serif;
+}
+
+section {
+	background: $container-bgcolor;
+	width: 500px;
+	max-width: 700px;
+	margin: auto;
+	border: .5px solid $container-bordercolor;
+	border-radius: 10px;
+}

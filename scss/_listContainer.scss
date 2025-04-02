@@ -1,0 +1,62 @@
+// _base.scss
+//  Author:             Jack
+//  Date:               2022-03-30
+//  Last revised:       2024-07-11
+//  Description:        Lab 10's CSS
+
+.listContainer {
+	min-height: 60vh;
+	padding: 0.75rem;
+
+	.listTitle {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+	button {
+		font-size: 1rem;
+		background: $clear-button-color;
+		padding: 0 0.1rem;
+		margin-bottom: 0.5rem;
+		@include mq(768px) {
+			padding: 0 0.5rem;
+		}
+	}
+
+	hr {
+		width: 100%;
+	}
+}  // end of .listTitle
+
+	.item {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding-top: 1rem;
+
+			input[type='checkbox'] {
+					width: 1.5rem;
+					height: 1.5rem;
+					cursor: pointer;
+					margin-right: 1.2rem;
+					margin-top: -8px;
+					position: relative;
+					top: 4px;
+			}
+
+			input[type='checkbox'] {
+					width: 1.5rem;
+					height: 1.5rem;
+					cursor: pointer;
+					margin-right: 1.2rem;
+			}
+
+			input[type='checkbox']:focus + label {
+					text-decoration: line-through;
+			}
+
+			label {
+					font-size: 1.3rem;
+			}
+	}  // end of .item
+}      // end of .listContainer 
